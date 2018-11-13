@@ -202,7 +202,6 @@ class ESIOS(object):
 
     def get_data(self, indicator, start, end):
         """
-
         :param indicator: Series indicator
         :param start: Start date
         :param end: End date
@@ -213,7 +212,7 @@ class ESIOS(object):
             start = start.strftime(self.dateformat)
         
         if type(end) is datetime.datetime:
-            start = end.strftime(self.dateformat)
+            end = end.strftime(self.dateformat)
         
         if type(indicator) is int:
             indicator = str(indicator)
